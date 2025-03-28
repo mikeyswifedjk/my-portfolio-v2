@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blink-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 5px;
+  height: 1.2em;
+  background-color: #ffe4e1;
+  animation: blink 0.9s steps(3, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+
+/* Change the color of the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* Change the track (background) color of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #7d4f50; /* Light gray background for the scrollbar track */
+}
+
+/* Change the thumb (handle) color of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #ffb6c1; /* Darker color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Change the thumb color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb6c1; /* Darker shade on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
